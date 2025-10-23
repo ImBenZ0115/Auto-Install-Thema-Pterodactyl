@@ -150,9 +150,6 @@ elif [ "$SELECT_THEME" -eq 2 ]; then
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
-  curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-  sudo apt install -y nodejs
-  npm i -g yarn
   cd /var/www/pterodactyl
   yarn add react-feather
   php artisan billing:install stable
